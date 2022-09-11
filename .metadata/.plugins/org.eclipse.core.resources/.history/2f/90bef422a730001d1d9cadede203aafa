@@ -1,0 +1,28 @@
+package visao;
+
+import java.util.Scanner;
+
+import dominio.*;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		Scanner Teclado = new Scanner(System.in);
+		
+		Aluno A1 = new Aluno();
+		Aluno A2 = new Aluno();
+		Aluno A3 = new Aluno();
+		int i = 1;
+				
+		while(i<=3) {
+			
+			System.out.println("Escreve o nome do individuo " + i + ": ");
+			A1.setNome(Teclado.nextLine()) ;
+			i++;
+		}
+		
+		System.out.println(A1.getNome() + A2.getNome()+ A3.getNome());
+		
+	}
+
+}

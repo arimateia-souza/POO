@@ -1,0 +1,17 @@
+package visao;
+
+import dominio.*;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Aluno A = new Aluno();
+		
+		A.getNome();
+		
+		System.out.println(A.getNome());
+		
+	}
+
+}

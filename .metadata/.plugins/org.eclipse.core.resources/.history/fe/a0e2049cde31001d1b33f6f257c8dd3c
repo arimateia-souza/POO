@@ -1,0 +1,37 @@
+package visao;
+
+import java.util.Scanner;
+
+import dominio.Aluno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		Aluno a1 = new Aluno();
+		Aluno a2 = new Aluno();
+		Aluno a3 = new Aluno();
+		
+		int op;
+		
+		do {
+			System.out.println("---------------------------------------------------------\r\n"
+					+ "MENU PRINCIPAL\r\n"
+					+ "---------------------------------------------------------\r\n"
+					+ "1 - CADASTRAR ALUNOS\r\n"
+					+ "2 - CADASTRAR NOTAS\r\n"
+					+ "3 - CALCULAR MÉDIAS\r\n"
+					+ "4 - INFORMAR SITUAÇÕES\r\n"
+					+ "5 - INFORMAR DADOS DE UM ALUNO \r\n"
+					+ "6 - ALTERAR NOTA\r\n"
+					+ "7 - SAIR\r\n"
+					+ "---------------------------------------------------------");
+			System.out.println("Escolha a opcao desejada: ");
+			
+			op = ler.nextInt();
+			}while(op !=7);
+		
+	}
+
+}

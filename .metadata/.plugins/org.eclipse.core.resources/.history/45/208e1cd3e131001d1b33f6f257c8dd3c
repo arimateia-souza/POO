@@ -1,0 +1,96 @@
+package visao;
+
+import java.util.Scanner;
+
+import dominio.Aluno;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		Scanner ler = new Scanner(System.in);
+		
+		Aluno a1 = new Aluno();
+		Aluno a2 = new Aluno();
+		Aluno a3 = new Aluno();
+		
+		int op;
+		
+		do {
+			System.out.println("---------------------------------------------------------\r\n"
+					+ "MENU PRINCIPAL\r\n"
+					+ "---------------------------------------------------------\r\n"
+					+ "1 - CADASTRAR ALUNOS\r\n"
+					+ "2 - CADASTRAR NOTAS\r\n"
+					+ "3 - CALCULAR MÉDIAS\r\n"
+					+ "4 - INFORMAR SITUAÇÕES\r\n"
+					+ "5 - INFORMAR DADOS DE UM ALUNO \r\n"
+					+ "6 - ALTERAR NOTA\r\n"
+					+ "7 - SAIR\r\n"
+					+ "---------------------------------------------------------");
+			System.out.println("Escolha a opcao desejada: ");
+			op = ler.nextInt();
+			switch(op) {
+			
+				case 1:
+					System.out.println("CADASTRAR ALUNOS");
+					System.out.println("Digite o nome do aluno 1:");
+					a1.setNome(ler.nextLine());
+					System.out.println("Digite o nome do aluno 1:");
+					a1.setMatricula(ler.nextInt());
+					System.out.println("Digite o nome do aluno 2:");
+					a2.setNome(ler.nextLine());
+					System.out.println("Digite o nome do aluno 2:");
+					a2.setMatricula(ler.nextInt());
+					System.out.println("Digite o nome do aluno 3:");
+					a3.setNome(ler.nextLine());
+					System.out.println("Digite o nome do aluno 3:");
+					a3.setMatricula(ler.nextInt());
+					break;
+				case 2:
+					System.out.println("CADASTRAR NOTAS");
+					System.out.println("Digite a nota do aluno 1:");
+					a1.setNotas(ler.nextFloat(),ler.nextFloat(),ler.nextFloat()) ;
+					
+					System.out.println("Digite a nota do aluno 2:");
+					a2.setNotas(ler.nextFloat(),ler.nextFloat(),ler.nextFloat()) ;
+					
+					System.out.println("Digite a nota do aluno 3:");
+					a3.setNotas(ler.nextFloat(),ler.nextFloat(),ler.nextFloat()) ;
+				case 3:
+					System.out.println("CALCULAR MÉDIAS");
+					a1.calcularMedia();
+					a2.calcularMedia();
+					a3.calcularMedia();
+				case 4:
+					System.out.println("INFORMAR SITUAÇÕES");
+					a1.getSituacao();
+					a2.getSituacao();
+					a3.getSituacao();
+				case 5:
+					System.out.println("INFORMAR DADOS DE UM ALUNO");
+					System.out.println("1 = aluno1, 2= aluno2, 3 = aluno3");
+					op = ler.nextInt();
+					if(op ==1 ) {
+						System.out.println("nome aluno 1:" + a1.getNome() + "matricula do aluno:" + a1.getMatricula() 
+						+ "media do aluno:" + a1.getMedia() + "situacao do aluno:" + a1.getSituacao());
+					}
+
+
+			}
+				
+					
+			}while(op !=7);
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

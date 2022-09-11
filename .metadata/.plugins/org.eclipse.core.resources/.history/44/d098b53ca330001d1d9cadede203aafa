@@ -1,0 +1,14 @@
+package dominio;
+
+public class Aluno {
+	private String nome;
+	private int matricula;
+	private float nota1;
+	private float nota2;
+	private float nota3;
+	private String situacao;
+
+	
+
+
+}

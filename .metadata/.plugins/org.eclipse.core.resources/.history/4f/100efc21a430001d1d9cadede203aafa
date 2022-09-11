@@ -1,0 +1,20 @@
+package visao;
+
+import java.util.Scanner;
+
+import dominio.*;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		Aluno A = new Aluno();
+		
+		A.getNome();
+		Scanner Teclado = new Scanner().nextLine;
+		
+		System.out.println(A.getNome());
+		
+	}
+
+}

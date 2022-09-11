@@ -1,0 +1,59 @@
+package visao;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+import dominio.*;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		Scanner Teclado = new Scanner(System.in);
+		
+		Aluno A1 = new Aluno();
+		Aluno A2 = new Aluno();
+		Aluno A3 = new Aluno();
+		int op = 0;
+		
+		while(true) {
+			System.out.println("1 - CADASTRAR ALUNOS\r\n"
+					+ "2 - CADASTRAR NOTAS\r\n"
+					+ "3 - CALCULAR MÉDIAS\r\n"
+					+ "4 - INFORMAR SITUAÇÕES\r\n"
+					+ "5 - INFORMAR DADOS DE UM ALUNO \r\n"
+					+ "6 - ALTERAR NOTA\r\n"
+					+ "7 - SAIR\r\n"
+					+ "");
+			switch (op) {
+			case 1: { 
+				System.out.println("Digite o nome dos alunos: ");
+				A1.setNome(Teclado.nextLine());
+				A1.setMatricula(Teclado.nextInt());
+				A2.setNome(Teclado.nextLine());
+				A2.setMatricula(Teclado.nextInt());
+				A3.setNome(Teclado.nextLine());
+				A3.setMatricula(Teclado.nextInt());
+				break;
+
+				
+			}
+			default:
+				System.out.println("Digite o nome dos alunos: ");
+				break;
+			}
+		}
+		
+			
+		
+							
+//		System.out.println("Escreve o nome dos individuos: ");
+//		A1.setNome(Teclado.nextLine());
+//		A2.setNome(Teclado.nextLine());
+//		A3.setNome(Teclado.nextLine());
+//		
+//		
+//		System.out.println(A1.getNome() + A2.getNome()+ A3.getNome());
+		
+	}
+
+}
